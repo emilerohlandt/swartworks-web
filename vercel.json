@@ -1,6 +1,11 @@
 {
     "version": 2,
     "outputDirectory": "public",
+    "build": {
+        "env": {
+            "PHP_VERSION": "8.2"
+        }
+    },
     "functions": {
         "api/*.php": {
             "runtime": "vercel-php@0.7.2"
