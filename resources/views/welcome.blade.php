@@ -105,7 +105,7 @@
 
                 <!-- Card 0 -->
                 <div class="flex-none ml-12 w-[85vw] sm:w-[620px] h-[540px] bg-zinc-900/80 hover:bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-3xl p-6 flex flex-row justify-center justify-items-center gap-8 shadow-xl relative overflow-hidden group">
-                    <div class="absolute z-1 top-0 left-0 opacity-0 w-full h-full bg-[url(/public/images/1.webp)] bg-cover pointer-events-none"></div>
+                    <div class="absolute z-1 top-0 left-0 opacity-0 w-full h-full bg-[url(/images/1.webp)] bg-cover pointer-events-none"></div>
                     <div class="relative p-12 z-2 flex-1 flex flex-col h-full items-center justify-center">
                         <div>
                             <div class="h-16 w-16 mb-6 bg-zinc-800 rounded-xl flex items-center justify-center font-black text-xl text-white">
