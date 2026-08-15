@@ -163,14 +163,23 @@
                     <!-- ================= BASIC FORM VIEW ================= -->
                     <template x-if="mode === 'basic'">
                         <div class="space-y-5">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                 <div>
                                     <label class="block text-xs font-medium text-zinc-300 mb-1.5"><span class="text-rose-500">*</span> Material Choice</label>
                                     <select x-model="materialType" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors">
-                                        <option value="PLA - Basic">Standard PLA (Prototyping & General Use)</option>
+                                        <option value="PLA - Basic">Standard PLA (Prototyping)</option>
                                         <option value="PETG - HF">PETG (Durable & Water-resistant)</option>
-                                        <option value="ABS - Standard">ABS (High Strength & Heat Resistance)</option>
+                                        <option value="ABS - Standard">ABS (High Strength)</option>
                                         <option value="TPU - 95A HF">TPU (Flexible / Rubber-like)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-zinc-300 mb-1.5"><span class="text-rose-500">*</span> Color</label>
+                                    <select x-model="color" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                                        <option value="Matte white">Matte White</option>
+                                        <option value="Black">Black</option>
+                                        <option value="Grey">Grey</option>
+                                        <option value="Clear">Clear</option>
                                     </select>
                                 </div>
                                 <div>
@@ -181,7 +190,7 @@
 
                             <!-- Switch to Advanced Callout -->
                             <div class="p-3 bg-indigo-500/10 border border-indigo-500/20 rounded-xl flex items-center justify-between text-xs">
-                                <span class="text-indigo-300">Need custom infill, specific colors, tolerances, or composite materials?</span>
+                                <span class="text-indigo-300">Need custom infill, extra materials, specific tolerances, or composite options?</span>
                                 <button type="button" @click="mode = 'advanced'" class="text-indigo-400 font-semibold hover:underline shrink-0 ml-2">Switch to Advanced &rarr;</button>
                             </div>
                         </div>
@@ -266,14 +275,14 @@
 
                     <!-- Selected Material Box -->
                     <div class="pb-4 border-b border-zinc-800">
-                        <span class="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider block mb-2">Selected Material</span>
+                        <span class="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider block mb-2">Selected Material & Color</span>
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 bg-zinc-900 border border-zinc-800 rounded-lg flex items-center justify-center shrink-0">
                                 <svg class="w-5 h-5 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
                             </div>
                             <div>
                                 <p class="text-xs font-bold text-white" x-text="materialType"></p>
-                                <a href="#" class="text-[11px] text-emerald-400 hover:underline">Show material description</a>
+                                <p class="text-[11px] text-zinc-400" x-text="'Color: ' + color"></p>
                             </div>
                         </div>
                     </div>
