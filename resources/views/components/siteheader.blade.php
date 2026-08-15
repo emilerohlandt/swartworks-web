@@ -20,13 +20,13 @@
                Welcome
             </a>
 
-            <a href="{{ route('about') }}"
+            <a href="{{ route('services') }}"
                @class([
                    'text-sm transition-colors',
-                   'text-white font-semibold' => request()->routeIs('about'),
-                   'text-zinc-400 hover:text-white' => !request()->routeIs('about'),
+                   'text-white font-semibold' => request()->routeIs('services'),
+                   'text-zinc-400 hover:text-white' => !request()->routeIs('services'),
                ])>
-               About
+               Our Services
             </a>
 
             <img src="{{ asset('images/uk-flag.svg') }}" alt="Icon" class="w-7 h-auto block">
@@ -75,13 +75,13 @@
            Welcome
         </a>
 
-        <a href="{{ route('about') }}"
+        <a href="{{ route('services') }}"
            @class([
                'text-base py-2 transition-colors',
-               'text-emerald-400 font-semibold' => request()->routeIs('about'),
-               'text-zinc-400 hover:text-white' => !request()->routeIs('about'),
+               'text-emerald-400 font-semibold' => request()->routeIs('services'),
+               'text-zinc-400 hover:text-white' => !request()->routeIs('services'),
            ])>
-           About
+           Our Services
         </a>
 
         <div class="flex items-center justify-between pt-4 border-t border-zinc-800/80">

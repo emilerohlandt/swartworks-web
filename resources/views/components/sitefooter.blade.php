@@ -29,12 +29,12 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('about') }}"
+                        <a href="{{ route('services') }}"
                            @class([
                                'transition-colors hover:text-white',
-                               'text-emerald-400 font-medium' => request()->routeIs('about'),
+                               'text-emerald-400 font-medium' => request()->routeIs('services'),
                            ])>
-                           About Us
+                           Our Services
                         </a>
                     </li>
                 </ul>

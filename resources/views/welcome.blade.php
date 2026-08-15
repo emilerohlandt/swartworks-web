@@ -121,7 +121,7 @@
                 <!-- Card 1 -->
                 <div class="flex-none w-[85vw] sm:w-[480px] h-[540px] bg-zinc-900/80 hover:bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-3xl p-6 flex flex-col justify-between shadow-xl relative overflow-hidden group
                     transition-all duration-500 ease-out
-                    group-hover/cards:brightness-75 group-hover/cards:opacity-40 group-hover/cards:scale-[0.98]
+                    group-hover/cards:brightness-75 group-hover/cards:opacity-70 group-hover/cards:scale-[0.98]
                     hover:!brightness-100 hover:!opacity-100 hover:!scale-[1.0] hover:z-10 hover:shadow-2xl">
                     <div class="relative h-48 sm:h-46 rounded-2xl overflow-hidden bg-zinc-950 mb-4 flex-none pointer-events-none">
                         <img src="{{ asset('images/8.webp') }}" alt="FDM Printing" class="w-full h-full object-cover">
@@ -153,7 +153,7 @@
                 <!-- Card 2 -->
                 <div class="flex-none w-[85vw] sm:w-[480px] h-[540px] bg-zinc-900/80 hover:bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-3xl p-6 flex flex-col justify-between shadow-xl relative overflow-hidden group
                     transition-all duration-500 ease-out
-                    group-hover/cards:brightness-75 group-hover/cards:opacity-40 group-hover/cards:scale-[0.98]
+                    group-hover/cards:brightness-75 group-hover/cards:opacity-70 group-hover/cards:scale-[0.98]
                     hover:!brightness-100 hover:!opacity-100 hover:!scale-[1.0] hover:z-10 hover:shadow-2xl">
                     <div class="relative h-48 sm:h-46 rounded-2xl overflow-hidden bg-zinc-950 mb-4 flex-none pointer-events-none">
                         <img src="{{ asset('images/5.webp') }}" alt="FDM Printing" class="w-full h-full object-cover">
@@ -183,7 +183,7 @@
                 <!-- Card 3 -->
                 <div class="flex-none w-[85vw] sm:w-[480px] h-[540px] bg-zinc-900/80 hover:bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-3xl p-6 flex flex-col justify-between shadow-xl relative overflow-hidden group
                     transition-all duration-500 ease-out
-                    group-hover/cards:brightness-75 group-hover/cards:opacity-40 group-hover/cards:scale-[0.98]
+                    group-hover/cards:brightness-75 group-hover/cards:opacity-70 group-hover/cards:scale-[0.98]
                     hover:!brightness-100 hover:!opacity-100 hover:!scale-[1.0] hover:z-10 hover:shadow-2xl">
                     <div class="relative h-48 sm:h-46 rounded-2xl overflow-hidden bg-zinc-950 mb-4 flex-none pointer-events-none">
                         <img src="{{ asset('images/3.webp') }}" alt="FDM Printing" class="w-full h-full object-cover">
@@ -212,7 +212,7 @@
                 <!-- Card 4 -->
                 <div class="flex-none w-[85vw] sm:w-[480px] h-[540px] bg-zinc-900/80 hover:bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-3xl p-6 flex flex-col justify-between shadow-xl relative overflow-hidden group
                     transition-all duration-500 ease-out
-                    group-hover/cards:brightness-75 group-hover/cards:opacity-40 group-hover/cards:scale-[0.98]
+                    group-hover/cards:brightness-75 group-hover/cards:opacity-70 group-hover/cards:scale-[0.98]
                     hover:!brightness-100 hover:!opacity-100 hover:!scale-[1.0] hover:z-10 hover:shadow-2xl">
                     <div class="relative h-48 sm:h-46 rounded-2xl overflow-hidden bg-zinc-950 mb-4 flex-none pointer-events-none">
                         <img src="{{ asset('images/2.webp') }}" alt="FDM Printing" class="w-full h-full object-cover">
@@ -241,7 +241,7 @@
                 <!-- Card 5 -->
                 <div class="flex-none mr-12 w-[85vw] sm:w-[480px] h-[540px] bg-zinc-900/80 hover:bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-3xl p-6 flex flex-col justify-between shadow-xl relative overflow-hidden group
                     transition-all duration-500 ease-out
-                    group-hover/cards:brightness-75 group-hover/cards:opacity-40 group-hover/cards:scale-[0.98]
+                    group-hover/cards:brightness-75 group-hover/cards:opacity-70 group-hover/cards:scale-[0.98]
                     hover:!brightness-100 hover:!opacity-100 hover:!scale-[1.0] hover:z-10 hover:shadow-2xl">
                     <div class="relative h-48 sm:h-46 rounded-2xl overflow-hidden bg-zinc-950 mb-4 flex-none pointer-events-none">
                         <img src="{{ asset('images/8.webp') }}" alt="FDM Printing" class="w-full h-full object-cover">
