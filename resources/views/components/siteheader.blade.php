@@ -29,6 +29,24 @@
                Our Services
             </a>
 
+            <a href="{{ route('modelhub') }}"
+               @class([
+                   'text-sm transition-colors',
+                   'text-white font-semibold' => request()->routeIs('modelhub'),
+                   'text-zinc-400 hover:text-white' => !request()->routeIs('modelhub'),
+               ])>
+               3D Model Hub
+            </a>
+
+            <a href="{{ route('login') }}"
+               @class([
+                   'text-sm transition-colors',
+                   'text-rose-600 font-semibold' => request()->routeIs('login'),
+                   'text-rose-400 hover:text-rose-600' => !request()->routeIs('login'),
+               ])>
+               Admin
+            </a>
+
             <img src="{{ asset('images/uk-flag.svg') }}" alt="Icon" class="w-7 h-auto block">
         </div>
 
@@ -82,6 +100,15 @@
                'text-zinc-400 hover:text-white' => !request()->routeIs('services'),
            ])>
            Our Services
+        </a>
+
+        <a href="{{ route('modelhub') }}"
+           @class([
+               'text-base py-2 transition-colors',
+               'text-emerald-400 font-semibold' => request()->routeIs('modelhub'),
+               'text-zinc-400 hover:text-white' => !request()->routeIs('modelhub'),
+           ])>
+           3D Model Hub
         </a>
 
         <div class="flex items-center justify-between pt-4 border-t border-zinc-800/80">

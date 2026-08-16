@@ -37,6 +37,15 @@
                            Our Services
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ route('modelhub') }}"
+                           @class([
+                               'transition-colors hover:text-white',
+                               'text-emerald-400 font-medium' => request()->routeIs('modelhub'),
+                           ])>
+                           3D Model Hub
+                        </a>
+                    </li>
                 </ul>
             </div>
 

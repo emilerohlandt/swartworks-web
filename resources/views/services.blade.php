@@ -23,7 +23,7 @@
 
             <!-- Section Header -->
             <div class="px-4 flex-col flex items-center mb-12">
-                <h1 class="text-6xl font-bold tracking-tight leading-20 text-center mb-2 bg-gradient-to-r from-zinc-400 to-zinc-700 bg-clip-text text-transparent">About SwartWorks</h1>
+                <h1 class="text-6xl font-bold tracking-tight leading-20 text-center mb-2 bg-gradient-to-r from-zinc-400 to-zinc-700 bg-clip-text text-transparent">SwartWorks Services</h1>
                 <p class="text-lg text-zinc-400 max-w-280 mt-1 text-center">We turn your designs into high-quality FDM 3D printed parts — from prototypes to short production runs. Get expert consultation and a wide choice of materials including PLA, PETG, ABS, nylon and engineering polymers. <span class="text-emerald-500">Standard Jobs: (3–7 working days)</span></p>
             </div>
 

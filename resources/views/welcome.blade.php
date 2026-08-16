@@ -103,7 +103,7 @@
                 }"
                 class="group/cards flex-1 flex items-center overflow-x-auto no-scrollbar gap-8 py-6 will-change-scroll">
 
-                <!-- Card 0 -->
+                <!-- Card 0 (Static Intro) -->
                 <div class="flex-none ml-12 w-[85vw] sm:w-[620px] h-[540px] bg-zinc-900/80 hover:bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-3xl p-6 flex flex-row justify-center justify-items-center gap-8 shadow-xl relative overflow-hidden group">
                     <div class="absolute z-1 top-0 left-0 opacity-0 w-full h-full bg-[url(/images/1.webp)] bg-cover pointer-events-none"></div>
                     <div class="relative p-12 z-2 flex-1 flex flex-col h-full items-center justify-center">
@@ -118,165 +118,71 @@
                     </div>
                 </div>
 
-                <!-- Card 1 -->
-                <div class="flex-none w-[85vw] sm:w-[480px] h-[540px] bg-zinc-900/80 hover:bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-3xl p-6 flex flex-col justify-between shadow-xl relative overflow-hidden group
-                    transition-all duration-500 ease-out
-                    group-hover/cards:brightness-75 group-hover/cards:opacity-70 group-hover/cards:scale-[0.98]
-                    hover:!brightness-100 hover:!opacity-100 hover:!scale-[1.0] hover:z-10 hover:shadow-2xl">
-                    <div class="relative h-48 sm:h-46 rounded-2xl overflow-hidden bg-zinc-950 mb-4 flex-none pointer-events-none">
-                        <img src="{{ asset('images/8.webp') }}" alt="FDM Printing" class="w-full h-full object-cover">
-                        <span class="absolute top-3 left-3 bg-zinc-950/80 backdrop-blur-md text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-zinc-800">Standard &amp; Tough</span>
-                    </div>
-                    <div class="flex-1 flex flex-col justify-between">
-                        <div>
-                            <h2 class="text-3xl font-bold text-white mb-2">Functional Prototypes</h2>
-                            <p class="text-zinc-400 text-md leading-normal mb-4">High-quality prototypes produced to your exact specifications. Perfect for fit, form, and functional testing during product development.</p>
-                        </div>
-                        <div>
-                            <span class="text-xs font-semibold uppercase tracking-wider text-zinc-500 block mb-2">Available Materials</span>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-zinc-800 border border-zinc-700/50 text-zinc-200 text-xs font-medium rounded-full">PETG</span>
-                                <span class="px-3 py-1 bg-zinc-800 border border-zinc-700/50 text-zinc-200 text-xs font-medium rounded-full">ABS</span>
-                                <span class="px-3 py-1 bg-zinc-800 border border-zinc-700/50 text-zinc-200 text-xs font-medium rounded-full">TPU (Flex)</span>
-                                <span class="px-3 py-1 bg-zinc-800 border border-zinc-700/50 text-zinc-200 text-xs font-medium rounded-full">PA-CF (Nylon Carbon)</span>
-                                <span class="px-3 py-1 bg-zinc-800 border border-zinc-700/50 text-zinc-200 text-xs font-medium rounded-full">Polycarbonate</span>
-                            </div>
-                        </div>
-                        <button
-                            @click="quoteOpen = true"
-                            class="w-full text-sm mt-4 font-semibold bg-zinc-800 hover:bg-zinc-950 border border-zinc-600 hover:border-emerald-500 text-white px-5 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-emerald-500/20 active:scale-95 cursor-pointer">
-                            Get a Quote
-                        </button>
-                    </div>
-                </div>
+                <!-- Dynamic Service Cards from Database -->
+                @foreach($services as $index => $service)
+                    <div class="flex-none {{ $loop->last ? 'mr-12' : '' }} w-[85vw] sm:w-[480px] h-[540px] bg-zinc-900/80 hover:bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-3xl p-6 flex flex-col justify-between shadow-xl relative overflow-hidden group
+                        transition-all duration-500 ease-out
+                        group-hover/cards:brightness-75 group-hover/cards:opacity-70 group-hover/cards:scale-[0.98]
+                        hover:!brightness-100 hover:!opacity-100 hover:!scale-[1.0] hover:z-10 hover:shadow-2xl">
 
-                <!-- Card 2 -->
-                <div class="flex-none w-[85vw] sm:w-[480px] h-[540px] bg-zinc-900/80 hover:bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-3xl p-6 flex flex-col justify-between shadow-xl relative overflow-hidden group
-                    transition-all duration-500 ease-out
-                    group-hover/cards:brightness-75 group-hover/cards:opacity-70 group-hover/cards:scale-[0.98]
-                    hover:!brightness-100 hover:!opacity-100 hover:!scale-[1.0] hover:z-10 hover:shadow-2xl">
-                    <div class="relative h-48 sm:h-46 rounded-2xl overflow-hidden bg-zinc-950 mb-4 flex-none pointer-events-none">
-                        <img src="{{ asset('images/5.webp') }}" alt="FDM Printing" class="w-full h-full object-cover">
-                        <span class="absolute top-3 left-3 bg-zinc-950/80 backdrop-blur-md text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-zinc-800">Ultra High Detail</span>
-                    </div>
-                    <div class="flex-1 flex flex-col justify-between">
-                        <div>
-                            <h2 class="text-3xl font-bold text-white mb-2">Jigs, Fixtures and Manufacturing Aids</h2>
-                            <p class="text-zinc-400 text-md leading-normal mb-4">Custom 3D printed tooling to support assembly, inspection, and production processes. Ideal for engineering environments.</p>
-                        </div>
-                        <div>
-                            <span class="text-xs font-semibold uppercase tracking-wider text-zinc-500 block mb-2">Available Materials</span>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-zinc-800 border border-zinc-700/50 text-zinc-200 text-xs font-medium rounded-full">Standard Resin</span>
-                                <span class="px-3 py-1 bg-zinc-800 border border-zinc-700/50 text-zinc-200 text-xs font-medium rounded-full">Tough/ABS-Like</span>
-                                <span class="px-3 py-1 bg-zinc-800 border border-zinc-700/50 text-zinc-200 text-xs font-medium rounded-full">Flexible Resin</span>
-                            </div>
-                        </div>
-                        <button
-                            @click="quoteOpen = true"
-                            class="w-full text-sm mt-4 font-semibold bg-zinc-800 hover:bg-zinc-950 border border-zinc-600 hover:border-emerald-400 text-white px-5 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-emerald-500/20 active:scale-95 cursor-pointer">
-                            Get a Quote
-                        </button>
-                    </div>
-                </div>
+                        <!-- Service Image & Badge Header -->
+                        <div class="relative h-48 sm:h-40 rounded-2xl overflow-hidden bg-zinc-950 mb-4 flex-none pointer-events-none">
+                            <img src="{{ $service->image_path ? asset('storage/' . $service->image_path) : asset('images/8.webp') }}"
+                                 alt="{{ $service->title ?? $service->name }}"
+                                 class="w-full h-full object-cover">
 
-                <!-- Card 3 -->
-                <div class="flex-none w-[85vw] sm:w-[480px] h-[540px] bg-zinc-900/80 hover:bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-3xl p-6 flex flex-col justify-between shadow-xl relative overflow-hidden group
-                    transition-all duration-500 ease-out
-                    group-hover/cards:brightness-75 group-hover/cards:opacity-70 group-hover/cards:scale-[0.98]
-                    hover:!brightness-100 hover:!opacity-100 hover:!scale-[1.0] hover:z-10 hover:shadow-2xl">
-                    <div class="relative h-48 sm:h-46 rounded-2xl overflow-hidden bg-zinc-950 mb-4 flex-none pointer-events-none">
-                        <img src="{{ asset('images/3.webp') }}" alt="FDM Printing" class="w-full h-full object-cover">
-                        <span class="absolute top-3 left-3 bg-zinc-950/80 backdrop-blur-md text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-zinc-800">Fast Turnaround</span>
-                    </div>
-                    <div class="flex-1 flex flex-col justify-between">
-                        <div>
-                            <h2 class="text-3xl font-bold text-white mb-2">Replacement Parts and Low-Volume Production</h2>
-                            <p class="text-zinc-400 text-md leading-normal mb-4">Fast and cost-effective production of replacement parts and short runs without the need for expensive tooling.</p>
-                        </div>
-                        <div>
-                            <span class="text-xs font-semibold uppercase tracking-wider text-zinc-500 block mb-2">Available Materials</span>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-zinc-800 border border-zinc-700/50 text-zinc-200 text-xs font-medium rounded-full">PA-CF (Nylon Carbon)</span>
-                                <span class="px-3 py-1 bg-zinc-800 border border-zinc-700/50 text-zinc-200 text-xs font-medium rounded-full">Polycarbonate</span>
-                            </div>
-                        </div>
-                        <button
-                            @click="quoteOpen = true"
-                            class="w-full text-sm mt-4 font-semibold bg-zinc-800 hover:bg-zinc-950 border border-zinc-600 hover:border-emerald-400 text-white px-5 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-emerald-500/20 active:scale-95 cursor-pointer">
-                            Get a Quote
-                        </button>
-                    </div>
-                </div>
+                            @php
+                                $badge = filled($service->callout_text) ? $service->callout_text : $service->badge_text;
+                            @endphp
 
-                <!-- Card 4 -->
-                <div class="flex-none w-[85vw] sm:w-[480px] h-[540px] bg-zinc-900/80 hover:bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-3xl p-6 flex flex-col justify-between shadow-xl relative overflow-hidden group
-                    transition-all duration-500 ease-out
-                    group-hover/cards:brightness-75 group-hover/cards:opacity-70 group-hover/cards:scale-[0.98]
-                    hover:!brightness-100 hover:!opacity-100 hover:!scale-[1.0] hover:z-10 hover:shadow-2xl">
-                    <div class="relative h-48 sm:h-46 rounded-2xl overflow-hidden bg-zinc-950 mb-4 flex-none pointer-events-none">
-                        <img src="{{ asset('images/2.webp') }}" alt="FDM Printing" class="w-full h-full object-cover">
-                        <span class="absolute top-3 left-3 bg-zinc-950/80 backdrop-blur-md text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-zinc-800">Get Creative</span>
-                    </div>
-                    <div class="flex-1 flex flex-col justify-between">
-                        <div>
-                            <h2 class="text-3xl font-bold text-white mb-2">Custom Components for Design and Interiors</h2>
-                            <p class="text-zinc-400 text-md leading-normal mb-4">Bespoke printed parts for interior designers, architects, and product designers with excellent finish quality.</p>
+                            @if(filled($badge))
+                                <span class="absolute top-3 left-3 z-10 bg-zinc-950/80 backdrop-blur-md text-amber-400 text-xs font-semibold px-3.5 py-1.5 rounded-full border border-zinc-600/80 shadow-md pointer-events-auto">
+                                    {{ $badge }}
+                                </span>
+                            @endif
                         </div>
-                        <div>
-                            <span class="text-xs font-semibold uppercase tracking-wider text-zinc-500 block mb-2">Available Materials</span>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-zinc-800 border border-zinc-700/50 text-zinc-200 text-xs font-medium rounded-full">PA-CF (Nylon Carbon)</span>
-                                <span class="px-3 py-1 bg-zinc-800 border border-zinc-700/50 text-zinc-200 text-xs font-medium rounded-full">Polycarbonate</span>
-                            </div>
-                        </div>
-                        <button
-                            @click="quoteOpen = true"
-                            class="w-full text-sm mt-4 font-semibold bg-zinc-800 hover:bg-zinc-950 border border-zinc-600 hover:border-emerald-400 text-white px-5 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-emerald-500/20 active:scale-95 cursor-pointer">
-                            Get a Quote
-                        </button>
-                    </div>
-                </div>
 
-                <!-- Card 5 -->
-                <div class="flex-none mr-12 w-[85vw] sm:w-[480px] h-[540px] bg-zinc-900/80 hover:bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-3xl p-6 flex flex-col justify-between shadow-xl relative overflow-hidden group
-                    transition-all duration-500 ease-out
-                    group-hover/cards:brightness-75 group-hover/cards:opacity-70 group-hover/cards:scale-[0.98]
-                    hover:!brightness-100 hover:!opacity-100 hover:!scale-[1.0] hover:z-10 hover:shadow-2xl">
-                    <div class="relative h-48 sm:h-46 rounded-2xl overflow-hidden bg-zinc-950 mb-4 flex-none pointer-events-none">
-                        <img src="{{ asset('images/8.webp') }}" alt="FDM Printing" class="w-full h-full object-cover">
-                        <span class="absolute top-3 left-3 bg-zinc-950/80 backdrop-blur-md text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-zinc-800">Promotional</span>
-                    </div>
-                    <div class="flex-1 flex flex-col justify-between">
-                        <div>
-                            <h2 class="text-3xl font-bold text-white mb-2">Gifts and Marketing Prints</h2>
-                            <p class="text-zinc-400 text-md leading-normal mb-4">Custom 3D printed promotional items, branded merchandise, and personalised gifts. Great for marketing campaigns and events.</p>
-                        </div>
-                        <div>
-                            <span class="text-xs font-semibold uppercase tracking-wider text-zinc-500 block mb-2">Available Materials</span>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-zinc-800 border border-zinc-700/50 text-zinc-200 text-xs font-medium rounded-full">PA-CF (Nylon Carbon)</span>
-                                <span class="px-3 py-1 bg-zinc-800 border border-zinc-700/50 text-zinc-200 text-xs font-medium rounded-full">Polycarbonate</span>
+                        <!-- Service Content -->
+                        <div class="flex-1 flex flex-col justify-between">
+                            <div>
+                                <h2 class="text-3xl font-bold text-white mb-2">{{ $service->title ?? $service->name }}</h2>
+                                <p class="text-zinc-400 text-md leading-normal mb-4 line-clamp-3">{{ $service->description }}</p>
                             </div>
+
+                            <!-- Assigned Materials -->
+                            <div>
+                                <span class="text-xs font-semibold uppercase tracking-wider text-zinc-500 block mb-2">Available Materials</span>
+                                <div class="flex flex-wrap gap-2">
+                                    @forelse($service->materials as $material)
+                                        <span class="px-3 py-1 bg-zinc-800 border border-zinc-700/50 text-zinc-200 text-xs font-medium rounded-full">
+                                            {{ $material->name }}
+                                        </span>
+                                    @empty
+                                        <span class="text-xs text-zinc-600 italic">No specific materials assigned</span>
+                                    @endforelse
+                                </div>
+                            </div>
+
+                            <!-- Quote Action Button -->
+                            <button
+                                @click="quoteOpen = true"
+                                class="w-full text-sm mt-4 font-semibold bg-zinc-800 hover:bg-zinc-950 border border-zinc-600 hover:border-emerald-500 text-white px-5 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-emerald-500/20 active:scale-95 cursor-pointer">
+                                Get a Quote
+                            </button>
                         </div>
-                        <button
-                            @click="quoteOpen = true"
-                            class="w-full text-sm mt-4 font-semibold bg-zinc-800 hover:bg-zinc-950 border border-zinc-600 hover:border-emerald-400 text-white px-5 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-emerald-500/20 active:scale-95 cursor-pointer">
-                            Get a Quote
-                        </button>
                     </div>
-                </div>
+                @endforeach
 
             </div>
 
-            <!-- Indicator Dots -->
+            <!-- Dynamic Indicator Dots -->
             <div class="flex justify-center items-center gap-2 mt-2">
-                <template x-for="(card, index) in [0, 1, 2]" :key="index">
+                <template x-for="(card, index) in Array.from($refs.slider?.children || []).length" :key="index">
                     <button
                         type="button"
-                        @click="scrollToIndex(index)"
+                        @click="scrollToIndex(index - 1)"
                         class="h-2 rounded-full transition-all duration-300 cursor-pointer"
-                        :class="activeIndex === index ? 'w-8 bg-zinc-200' : 'w-2 bg-zinc-800 hover:bg-zinc-700'">
+                        :class="activeIndex === (index - 1) ? 'w-8 bg-zinc-200' : 'w-2 bg-zinc-800 hover:bg-zinc-700'">
                     </button>
                 </template>
             </div>
